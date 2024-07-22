@@ -1,0 +1,32 @@
+{
+    "version": 2,
+    "builds": [
+      {
+        "src": "app.js",
+        "use": "@vercel/node"
+      }
+    ],
+    "routes": [
+      {
+        "src": "/auth",
+        "dest": "/routes/authRoute.js"
+      },
+      {
+        "src": "/books",
+        "dest": "/routes/bookRoute.js"
+      },
+      {
+        "src": "/borrowing",
+        "dest": "/routes/borrowingRoute.js"
+      },
+      {
+        "src": "/profile",
+        "dest": "/routes/profileRoute.js"
+      },
+      {
+        "src": "/(.*)",
+        "dest": "/app.js"
+      }
+    ]
+  }
+  
