@@ -4,10 +4,10 @@ const { authenticateToken, authorizeRole, authorizeUsername} = require('../middl
 
 const router = express.Router();
 
-router.post('/profile', authenticateToken, createProfile);
-router.get('/profiles', authenticateToken, authorizeRole('admin'), getProfiles);
-router.put('/profile/edit/:username', authenticateToken, authorizeRole('admin'), updateProfile);
-router.delete('/profile/:username', authenticateToken, authorizeRole('admin'), deleteProfile);
-router.get('/profile/user/:username', authenticateToken, authorizeUsername, getProfileByUsername);
+router.post('/', authenticateToken, createProfile);
+router.get('/', authenticateToken, authorizeRole('admin'), getProfiles);
+router.put('/edit/:username', authenticateToken, authorizeRole('admin'), updateProfile);
+router.delete('/:username', authenticateToken, authorizeRole('admin'), deleteProfile);
+router.get('/user/:username', authenticateToken, authorizeUsername, getProfileByUsername);
 
 module.exports = router;
