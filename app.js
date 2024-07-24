@@ -10,7 +10,12 @@ const profileRoute = require('./routes/profileRoute');
 const app = express();
 app.use(bodyParser.json());
 
-app.use('/auth', authRoutes, profileRoute);
+app.get('/', (req, res) => {
+    res.send('Welcome to the API');
+});
+
+app.use('/auth', authRoutes);
+app.use('/profile', profileRoute)
 app.use('/books', bookRoutes);
 app.use('/borrowing', borrowingRoutes);
 // Protected routes
