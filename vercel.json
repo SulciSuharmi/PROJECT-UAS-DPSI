@@ -8,19 +8,19 @@
     ],
     "routes": [
       {
-        "src": "/auth",
+        "src": "/auth/(.*)",
         "dest": "/routes/authRoute.js"
       },
       {
-        "src": "/books",
+        "src": "/books/(.*)",
         "dest": "/routes/bookRoute.js"
       },
       {
-        "src": "/borrowing",
+        "src": "/borrowing(.*)",
         "dest": "/routes/borrowingRoute.js"
       },
       {
-        "src": "/profile",
+        "src": "/profile(.*)",
         "dest": "/routes/profileRoute.js"
       },
       {
@@ -29,4 +29,3 @@
       }
     ]
   }
-  
